@@ -18,6 +18,7 @@
   export let icon: string;
   export let title: string;
   export let align: Align = 'top-left';
+  export let direction: 'left' | 'right' = 'right';
   export let buttonColor: Color = 'transparent';
 
   let showContextMenu = false;
@@ -90,6 +91,7 @@
   </div>
   <ContextMenu
     {...contextMenuPosition}
+    {direction}
     ariaActiveDescendant={selectedId}
     ariaLabelledBy={buttonId}
     bind:menuElement={menuContainer}
