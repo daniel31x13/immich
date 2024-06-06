@@ -58,10 +58,7 @@
   setContext(() => (showContextMenu = false));
 </script>
 
-<div
-  use:clickOutside={{ onOutclick: () => (showContextMenu = false) }}
-  use:focusOutside={{ onFocusOut: () => (showContextMenu = false) }}
->
+<div use:clickOutside={{ onOutclick: closeDropdown }} use:focusOutside={{ onFocusOut: closeDropdown }}>
   <div
     use:shortcuts={[
       {
