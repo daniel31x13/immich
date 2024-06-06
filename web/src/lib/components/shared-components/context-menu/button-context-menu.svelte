@@ -20,6 +20,7 @@
   export let align: Align = 'top-left';
   export let direction: 'left' | 'right' = 'right';
   export let buttonColor: Color = 'transparent';
+  export let buttonSize: string | undefined = undefined;
 
   let showContextMenu = false;
   let contextMenuPosition = { x: 0, y: 0 };
@@ -87,6 +88,7 @@
       ariaExpanded={showContextMenu}
       ariaHasPopup={true}
       ariaControls={menuId}
+      size={buttonSize}
     />
   </div>
   <ContextMenu
